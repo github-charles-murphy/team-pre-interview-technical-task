@@ -8,7 +8,7 @@ resource "aws_pipes_pipe" "basket_events_pipe" {
   source_parameters {
     filter_criteria {
       filter {
-        pattern = "{}"
+        pattern = jsonencode({})
       }
     }
   }
@@ -24,7 +24,7 @@ resource "aws_pipes_pipe" "checkout_events_pipe" {
   source_parameters {
     filter_criteria {
       filter {
-        pattern = "{}"
+        pattern = jsonencode({})
       }
     }
   }

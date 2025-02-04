@@ -25,7 +25,7 @@ resource "aws_iam_policy" "eventbridge_pipes_policy" {
         Effect = "Allow"
         Action = [
           "sns:Subscribe",
-          "sns:ReceiveMessage"
+          "sns:Unsubscribe"
         ]
         Resource = [
           "arn:aws:sns:${var.region}:${var.accountid}:${var.username}-basket-events",

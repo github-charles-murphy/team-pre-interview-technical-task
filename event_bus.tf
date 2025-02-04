@@ -4,9 +4,7 @@ resource "aws_cloudwatch_event_rule" "sns_events_rule" {
 
   event_bus_name = "arn:aws:events:${var.region}:${var.accountid}:event-bus/${var.username}-domain-events"
 
-  event_pattern = jsonencode({
-    source = ["aws.sns"]
-  })
+  event_pattern = jsonencode({})
 }
 
 resource "aws_cloudwatch_event_target" "sqs_target" {
