@@ -12,3 +12,13 @@ variable "region" {
   description = "The region for the cloud resources"
   type        = string
 }
+
+variable "sender" {
+  description = "The sender of messages"
+  type        = string
+}
+
+variable "max_receive_count" {
+  type    = number
+  default = 5
+}

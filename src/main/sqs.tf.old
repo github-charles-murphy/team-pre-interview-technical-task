@@ -18,7 +18,7 @@ resource "aws_sqs_queue_policy" "event_queue_policy" {
         Resource = aws_sqs_queue.event_queue.arn
         Condition = {
           ArnEquals = {
-            "aws:SourceArn" = "arn:aws:events:${var.region}:${var.accountid}:event-bus/${var.username}-domain-events"
+            "aws:SourceArn" = "arn:aws:events:${var.region}:${var.accountid}:event-bus/${var.username}-${var.bus}"
           }
         }
       }
