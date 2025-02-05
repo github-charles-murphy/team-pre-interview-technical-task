@@ -15,7 +15,11 @@ variable "region" {
 
 variable "sender" {
   description = "The sender of messages"
-  type        = string
+  type        = object({
+    name = string
+    arn = string
+    service = string
+  })
 }
 
 variable "max_receive_count" {

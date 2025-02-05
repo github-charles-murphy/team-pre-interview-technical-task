@@ -9,7 +9,7 @@ resource "aws_sqs_queue_policy" "sqs_policy" {
     Version = "2012-10-17"
     Statement = [{
       Effect = "Allow"
-      Principal = { Service = "events.amazonaws.com" }
+      Principal = { Service = var.sender.service }
       Action   = "sqs:SendMessage"
       Resource = aws_sqs_queue.sqs.arn
       Condition = {

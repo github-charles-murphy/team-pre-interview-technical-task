@@ -15,10 +15,18 @@ variable "region" {
 
 variable "source_sns_topic" {
   description = "The SOURCE sns topic"
-  type        = string
+  type        = object({
+    name = string
+    arn = string
+    service = string
+  })
 }
 
 variable "target_event_bus" {
   description = "The TARGET event bus"
-  type        = number
+  type        = object({
+    name = string
+    arn = string
+    service = string
+  })
 }
