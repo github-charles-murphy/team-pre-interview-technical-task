@@ -8,7 +8,7 @@ locals {
     for sns in var.sns_list : {
       name    = sns
       arn     = "arn:aws:sns:${var.region}:${var.accountid}:${var.username}-${sns}"
-      service = "pipes.amazonaws.com"
+      service = "sns.amazonaws.com"
     }
   ]
 }
