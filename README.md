@@ -1,3 +1,6 @@
+# NOTE for Gregory and Conrad
+I was NOT able to test this due to NOT having access to the AWS account (due to 1password link time out). Therefore, I have just written the code as best as I can for now.
+
 # Senior PRE Technical Task
 
 - [Introduction](#introduction)
